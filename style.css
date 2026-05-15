@@ -1,0 +1,275 @@
+/* 1. GLOBALE DESIGNREGLER & RESPONSIVITET */
+:root {
+    --bg-sand: #F7F4EF;        /* Varm, beroligende sandfarve */
+    --text-navy: #1C2D37;      /* Dyb professionel navyblå */
+    --accent-terracotta: #D36E50; /* Varm brændt orange til handling */
+    --card-green: #E8EDE9;     /* Dæmpet grønlig tone til positive valg */
+    --card-red: #F5EBEA;       /* Dæmpet rødlig tone til fravælg */
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-sand);
+    color: var(--text-navy);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* TYPOGRAFI */
+h1, h2, h3, .book-quote {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* KNAPPER */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-terracotta);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #BE583B;
+}
+
+/* LAYOUT GRIDS */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* 2. SPECIFIKKE SEKTIONER */
+
+/* HERO */
+.hero {
+    padding: 6rem 0;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-terracotta);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(28,45,55,0.08);
+}
+
+/* TRUST BAR */
+.trust-bar {
+    background-color: var(--text-navy);
+    color: var(--bg-sand);
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.trust-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+}
+
+.trust-logos {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.trust-logos span {
+    margin: 0 0.8rem;
+}
+
+/* SCREENING */
+.screening {
+    padding: 6rem 0;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.card {
+    padding: 3rem;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.card-yes { background-color: var(--card-green); }
+.card-no { background-color: var(--card-red); }
+
+.card h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.card ul {
+    list-style-position: inside;
+    list-style-type: "— ";
+}
+
+.card li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* ABOUT & BOG */
+.about {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.font-reverse .about-image { order: 1; }
+.font-reverse .about-content { order: 2; }
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.book-quote {
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--accent-terracotta);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #4A5E6A;
+}
+
+.book-quote span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: 6rem 0;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent-terracotta);
+}
+
+/* BOOKING SECTION */
+.booking-section {
+    padding: 6rem 0;
+    background-color: var(--text-navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.booking-wrapper {
+    max-width: 700px;
+}
+
+.booking-section h2 { margin-bottom: 1.5rem; }
+
+.calendar-embed {
+    background-color: rgba(255,255,255,0.05);
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    background-color: var(--bg-sand);
+}
+
+/* 3. MOBIL-OPTIMERING */
+@media (max-width: 768px) {
+    .grid-2, .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .font-reverse .about-image { order: 2; }
+    .font-reverse .about-content { order: 1; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    .hero { padding: 3rem 0; }
+    .trust-logos { font-size: 1rem; }
+}
